@@ -4,8 +4,8 @@ from keep_alive import keep_alive
 def start(update, context):
     update.message.reply_text("✅ البوت شغال 24/7 على Render!")
 
-TOKEN = "7690828449:AAEOWQKcU20yxepvdBpw1PWOqkSMDVoTMYE"
-
+import os
+TOKEN = os.getenv("TOKEN")
 keep_alive()
 
 updater = Updater(TOKEN, use_context=True)
